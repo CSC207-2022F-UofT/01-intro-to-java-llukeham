@@ -186,8 +186,8 @@ public class Basics {
                     current_sum = current_sum + arr[i]
                 }
             }
-            return current_sum;
         }
+        return current_sum;
     }
 
 
