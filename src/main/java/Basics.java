@@ -1,3 +1,31 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@llukeham 
+CSC207-2022F-UofT
+/
+01-intro-to-java-moonsdust
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+01-intro-to-java-moonsdust/src/main/java/Basics.java /
+@moonsdust
+moonsdust Updated Basics.java
+Latest commit 4e3ff03 2 days ago
+ History
+ 2 contributors
+@moonsdust@github-classroom
+200 lines (183 sloc)  7.26 KB
+
 /**
  * This file contains a few exercises to familiarize you with Java.
  * You should read this file from top-to-bottom. Any tasks you are to complete
@@ -65,6 +93,7 @@ public class Basics {
         int my_variable = 100;
 
 
+
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
          * this file!
@@ -99,10 +128,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-        for(int i = 10; i > 10; i--) {
+        for (int i = 10; i >= 0; i--) {
             System.out.println("Current count: " + i);
         }
-
 
     }
 
@@ -144,12 +172,9 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-
-        // Fill in the rest of the body here
-        String[] splitStrings = to_split.split(" ");
-
-        for(String str : splitStrings) {
-            ret.append(str.charAt(0));
+        String[] lstString = to_split.split(" ");
+        for (String s : lstString) {
+            ret.append(s.charAt(0));
         }
         return ret.toString();
     }
@@ -177,13 +202,13 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-        if (arr.length == 0 || arr.length == 1) {
-            return 0
+        if (arr.length == 0 | arr.length == 1) {
+            return 0;
         }
         else {
             for (int i = 0; i < arr.length; i++) {
-                if (i % 2 != 0) {
-                    current_sum = current_sum + arr[i]
+                if ((i % 2) != 0) { // If i % 2 doesn't equal 0
+                    current_sum += arr[i];
                 }
             }
             return current_sum;
