@@ -144,9 +144,11 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-        String[] lstString = to_split.split(" ");
-        for (String s : lstString) {
-            ret.append(s.charAt(0));
+
+        String[] splitStrings = to_split.split(" ");
+
+        for(String str : splitStrings) {
+            ret.append(str.charAt(0));
         }
         return ret.toString();
     }
@@ -179,8 +181,8 @@ public class Basics {
         }
         else {
             for (int i = 0; i < arr.length; i++) {
-                if ((i % 2) != 0) { // If i % 2 doesn't equal 0
-                    current_sum += arr[i];
+                if ((i % 2) != 0) { 
+                    current_sum = current_sum + arr[i];
                 }
             }
             return current_sum;
